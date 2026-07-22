@@ -1828,6 +1828,7 @@ function Library:CreateWindow(Settings)
 
     if IsOpen then
         task.spawn(function()
+            print("Cool")
             while IsOpen do
                 task.wait()
                 UIS.MouseBehavior = Enum.MouseBehavior.Default
