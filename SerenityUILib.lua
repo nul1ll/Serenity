@@ -3453,7 +3453,7 @@ function Library:CreateWindow(Settings)
         return TabElements, Activate
     end
 
-    local SettingsTab, OpenSettingsFunc = Funcs:CreateTab("UI Settings", true, "rbxassetid://7059346373")
+    local SettingsTab, OpenSettingsFunc = Funcs:CreateTab("UI Settings", true, nil)
 
     local AppBlock = SettingsTab:CreateBlock({Name = "Appearance", Side = "Left"})
     
