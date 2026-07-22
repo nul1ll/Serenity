@@ -1257,8 +1257,8 @@ function Library:CreateWindow(Settings)
         local WatermarkContainer = Create("Frame", {
             Name = "WatermarkContainer",
             Parent = ScreenGui,
-            Size = UDim2.new(0, 0, 0, 30),
-            Position = UDim2.new(0.5, 0, -0.1, 0),
+            Size = UDim2.new(0, 0, 0, 60),
+            Position = UDim2.new(0, 15, 0, 15),
             AnchorPoint = Vector2.new(0.5, 0),
             BackgroundTransparency = 1,
             ZIndex = 5000
