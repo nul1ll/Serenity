@@ -1830,8 +1830,8 @@ function Library:CreateWindow(Settings)
         task.spawn(function()
             while IsOpen do
                 task.wait()
-                UserInputService.MouseBehavior = Enum.MouseBehavior.Default
-                UserInputService.MouseIconEnabled = true
+                UIS.MouseBehavior = Enum.MouseBehavior.Default
+                UIS.MouseIconEnabled = true
             end
         end)
     end
@@ -1843,8 +1843,8 @@ function Library:CreateWindow(Settings)
             task.spawn(function()
                 while IsOpen do
                     task.wait()
-                    UserInputService.MouseBehavior = Enum.MouseBehavior.Default
-                    UserInputService.MouseIconEnabled = true
+                    UIS.MouseBehavior = Enum.MouseBehavior.Default
+                    UIS.MouseIconEnabled = true
                 end
             end)
         else
