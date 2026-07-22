@@ -2757,17 +2757,16 @@ function Library:CreateWindow(Settings)
                     end
                     
                     local found = false
-                    for _, v in pairs(Options) do
+                    for _, v in ipairs(Options) do
                         if v == Selected then
                             found = true
                             break
                         end
                     end
                     
-                    if found then
+                    if Selected ~= nil then
                         Title.Text = (Cfg.Name or "Dropdown") .. " - " .. tostring(Selected)
                     else
-                        Selected = nil
                         Title.Text = Cfg.Name or "Dropdown"
                     end
 
