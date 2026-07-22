@@ -1825,11 +1825,28 @@ function Library:CreateWindow(Settings)
     })
 
     local IsOpen, LastSize = true, WindowSize
+
+    if IsOpen then
+        task.spawn(function()
+            while IsOpen do
+                task.wait()
+                UserInputService.MouseBehavior = Enum.MouseBehavior.Default
+                UserInputService.MouseIconEnabled = true
+            end
+        end)
+    end
     
     local function ToggleUI()
         IsOpen = not IsOpen 
         if IsOpen then 
             WindowContainer.Visible = true
+            task.spawn(function()
+                while IsOpen do
+                    task.wait()
+                    UserInputService.MouseBehavior = Enum.MouseBehavior.Default
+                    UserInputService.MouseIconEnabled = true
+                end
+            end)
         else
             WindowContainer.Visible = false
         end
