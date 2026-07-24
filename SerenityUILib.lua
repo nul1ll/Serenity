@@ -2795,7 +2795,9 @@ function Library:CreateWindow(Settings)
                             hoverTweenBtn:Play()
                         end)
                         Btn.MouseLeave:Connect(function()
-                            if hoverTweenBtn then hoverTweenBind:Cancel() end
+                            if hoverTweenBind then
+                                hoverTweenBind:Cancel()
+                            end
                             leaveTweenBtn = TS:Create(Btn, TweenInfo.new(0.2), {BackgroundTransparency = 0.8, TextColor3 = SelectedTheme.TextDark})
                             leaveTweenBtn:Play()
                         end)
